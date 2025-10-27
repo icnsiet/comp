@@ -1,617 +1,379 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ICNSIET 2025 — International Conference on Networking, Security & IoT</title>
-  <meta name="description" content="ICNSIET 2025 — International Conference on Networking, Security, and Internet of Things. Feb 20-21, 2026 • Sreenidhi Institute of Science and Technology, Hyderabad, India. Papers managed via Microsoft CMT."/>
-  <link rel="icon" href="https://raw.githubusercontent.com/icnsiet/icnsiet2025/a2b10aaebaa0bb05033d2f91be1d9160ac75c420/public/ICNSIET_logo.png" />
-  <meta name="theme-color" content="#0b57d0" />
-
-  <!-- Structured data (basic) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ConferenceEvent",
-    "name": "International Conference on Networking, Security, and Internet of Things (ICNSIET 2025)",
-    "startDate": "2026-02-20",
-    "endDate": "2026-02-21",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "Place",
-      "name": "Sreenidhi Institute of Science and Technology",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "addressCountry": "IN"
-      }
-    },
-    "url": "https://icnsiet.org/",
-    "description": "Conference covering Networking, Security, and IoT. All paper management is handled via Microsoft CMT."
-  }
-  </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICNSIET 2026 – International Conference on Smart Innovations in Engineering & Technology</title>
   <style>
-    :root{
-      --bg: #f7fbff;
-      --card: #ffffff;
-      --muted: #556070;
-      --accent: #0b57d0;
-      --accent-2: #2563eb;
-      --glass: rgba(255,255,255,0.6);
-      --radius: 12px;
-      --shadow: 0 8px 30px rgba(2,6,23,0.08);
-      color-scheme: light;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    [data-theme="dark"]{
-      --bg: #071027;
-      --card: #07162b;
-      --muted: #9fb4d6;
-      --accent: #5fb0ff;
-      --accent-2: #2ca0ff;
-      --glass: rgba(10,20,30,0.6);
-      --shadow: 0 10px 30px rgba(2,6,23,0.6);
-      color-scheme: dark;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, var(--bg), #ffffff 60%);
-      color: #05204a;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-      transition: background .3s ease, color .3s ease;
-      padding-top:72px;
+    header {
+      position: fixed;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      top: 0;
     }
-
-    /* Header / Nav */
-    header{
-      position:fixed;
-      left:0;right:0;top:0;
-      height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index:1200;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));
-      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.7rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    [data-theme="dark"] header{
-      background: linear-gradient(90deg, rgba(5,16,32,0.7), rgba(5,16,32,0.5));
-      box-shadow: 0 1px 0 rgba(255,255,255,0.02);
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
     }
-    .nav {
-      width:100%;
-      max-width:1180px;
-      padding:12px 20px;
-      display:flex;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
+    .logo img {
+      height: 50px;
     }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #1e3a8a;
     }
-    .brand img{
-      width:42px;
-      height:42px;
-      object-fit:contain;
-      border-radius:8px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
     }
-    .brand .title{
-      font-weight:700;
-      font-size:1.05rem;
-      color:var(--accent-2);
-      line-height:1;
+    nav a {
+      text-decoration: none;
+      color: #4b5563;
+      font-weight: 500;
+      transition: color 0.3s;
     }
-    nav ul{
-      display:flex;
-      gap:14px;
-      align-items:center;
-      list-style:none;
-      margin:0;padding:0;
+    nav a:hover {
+      color: #2563eb;
     }
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.92rem;
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    nav a:hover{color:var(--accent)}
-    .controls{
-      display:flex;
-      gap:10px;
-      align-items:center;
+    #home {
+      margin-top: 90px;
+      background: linear-gradient(135deg, #eff6ff 0%, #fff 50%, #eff6ff 100%);
+      text-align: center;
+      padding: 6rem 2rem;
     }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:var(--accent);
-      color:white;
-      padding:10px 14px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow: 0 8px 20px rgba(11,87,208,0.15);
-      border: none;
-      cursor:pointer;
-      font-size:0.92rem;
+    .date-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
     }
-    .btn.secondary{
-      background:transparent;
-      color:var(--accent-2);
-      border:1px solid rgba(37,99,235,0.12);
-      font-weight:700;
-      box-shadow:none;
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1.5rem;
+      color: #111827;
+      line-height: 1.2;
     }
-
-    /* Toggle */
-    .toggle {
-      width:46px;height:28px;border-radius:999px;background:linear-gradient(90deg,#e6eefc,#f7fbff);
-      padding:4px;display:inline-flex;align-items:center;cursor:pointer;border:1px solid rgba(2,6,23,0.06);
+    h1 .highlight {
+      color: #2563eb;
     }
-    .toggle .dot{width:20px;height:20px;border-radius:50%;background:white;box-shadow:0 6px 18px rgba(2,6,23,0.08);transform:translateX(0);transition:transform .25s ease}
-
-    [data-theme="dark"] .toggle{background:linear-gradient(90deg,#04233f,#08314a);border-color:rgba(255,255,255,0.06)}
-    [data-theme="dark"] .toggle .dot{transform:translateX(18px);background:linear-gradient(90deg,#bfe6ff,#7fd1ff)}
-
-    /* Hero */
-    .hero{
-      max-width:1180px;
-      margin: 18px auto 36px;
-      padding:40px 20px;
-      display:grid;
-      grid-template-columns:1fr 420px;
-      gap:28px;
-      align-items:center;
+    .tagline {
+      font-size: 1.3rem;
+      color: #6b7280;
+      margin-bottom: 3rem;
     }
-    .hero-card{
-      background:var(--card);
-      border-radius:16px;
-      padding:34px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(5,20,40,0.04);
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 4rem;
     }
-    .badge{
-      display:inline-block;
-      padding:8px 14px;border-radius:999px;font-weight:700;color:var(--accent-2);
-      background:linear-gradient(90deg, rgba(37,99,235,0.08), rgba(37,99,235,0.03));
-      margin-bottom:16px;
-      font-size:0.9rem;
+    .btn {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
     }
-    h1{
-      margin:0 0 10px 0;
-      font-size:1.9rem;
-      line-height:1.05;
-      color:var(--accent-2);
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+      border: 2px solid #2563eb;
     }
-    p.lead{
-      margin:0 0 18px 0;color:var(--muted);font-size:1rem;
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
     }
-    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-    .small{font-size:0.9rem;color:var(--muted);}
-
-    /* Countdown */
-    .countdown-wrap{background:linear-gradient(180deg, rgba(37,99,235,0.05), transparent); padding:18px;border-radius:12px;margin-top:18px}
-    .countdown-grid{display:flex;gap:12px;flex-wrap:wrap}
-    .count-item{min-width:72px;background:var(--card);padding:10px;border-radius:10px;text-align:center;box-shadow:var(--shadow)}
-    .count-value{font-size:1.3rem;font-weight:800;color:var(--accent-2)}
-    .count-label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-top:6px}
-
-    /* Right panel */
-    .panel{
-      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
-      border-radius:16px;padding:22px;box-shadow:var(--shadow);min-height:220px;
-      display:flex;flex-direction:column;gap:12px;align-items:flex-start;justify-content:center;
+    .btn-secondary {
+      background: white;
+      color: #2563eb;
+      border: 2px solid #2563eb;
     }
-    [data-theme="dark"] .panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
-    .panel h3{margin:0;color:var(--accent);font-size:1rem}
-    .meta{font-size:0.95rem;color:var(--muted)}
-
-    /* Sections */
-    main{max-width:1180px;margin:0 auto;padding:12px;}
-    section.block{
-      margin:28px 0;
-      background:transparent;
+    .btn-secondary:hover {
+      background: #eff6ff;
     }
-    .grid{display:grid;gap:18px}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-    .card{
-      background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(2,6,23,0.03)
+    .countdown {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      margin: 0 auto;
     }
-    .card h4{margin:0 0 8px 0;color:var(--accent-2)}
-    .card p{margin:0;color:var(--muted)}
-
-    .dates-list{display:grid;gap:10px}
-    .date-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));border:1px solid rgba(2,6,23,0.03)}
-    [data-theme="dark"] .date-item{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
-    .date-label{font-weight:700;color:var(--muted)}
-    .date-value{font-weight:800;color:var(--accent-2)}
-
-    /* Topics */
-    .topics{display:flex;flex-direction:column;gap:10px}
-    .topic{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(37,99,235,0.04), transparent);font-weight:700;color:var(--accent-2);}
-
-    /* Committee */
-    .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .person{padding:14px;border-radius:10px;background:var(--card);box-shadow:var(--shadow);}
-
-    /* Contact */
-    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .venue{font-weight:700;color:var(--accent-2)}
-    .footer{
-      margin-top:36px;padding:26px;background:linear-gradient(90deg,#061d45, #0b57d0);color:white;border-radius:12px;
+    .countdown h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: #111827;
     }
-    .ack{font-size:0.9rem;color:rgba(255,255,255,0.85);margin-top:10px}
-
-    /* Footer bottom */
-    footer{max-width:1180px;margin:22px auto 80px;padding:8px 0;color:var(--muted);text-align:center;font-size:0.95rem}
-
-    /* Responsive */
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr; padding:20px}
-      .panel{order:2}
-      .hero-card{order:1}
-      .contact-grid{grid-template-columns:1fr}
-      header{height:72px}
-      body{padding-top:76px}
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .countdown-item {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      color: white;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+    }
+    .countdown-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: block;
+    }
+    .countdown-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-top: 0.5rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #111827;
+    }
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #4b5563;
+    }
+    .about-content p {
+      margin-bottom: 1.5rem;
+    }
+    #dates {
+      background: #f9fafb;
+    }
+    .dates-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .date-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .date-item.highlight {
+      background: #2563eb;
+      color: white;
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+    }
+    .date-label {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .date-value {
+      font-weight: bold;
+      color: #2563eb;
+      font-size: 1.1rem;
+    }
+    .date-item.highlight .date-value {
+      color: white;
+    }
+    footer {
+      background: #111827;
+      color: white;
+      padding: 3rem 2rem;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+    .footer-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .footer-section p {
+      color: #9ca3af;
+    }
+    .footer-section ul {
+      list-style: none;
+    }
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-section ul li a {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-section ul li a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+    .cmt-acknowledgment {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .copyright {
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .countdown-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="nav" role="navigation" aria-label="Main Navigation">
-      <div class="brand" aria-hidden="false">
-        <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none">
-          <img src="https://icnsiet.org/ICNSIET_logo.png" alt="ICNSIET logo">
-          <div>
-            <div class="title">ICNSIET 2025</div>
-            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px">Networking • Security • Internet of Things</div>
-          </div>
-        </a>
-      </div>
-
-      <nav aria-label="Quick links">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#dates">Important Dates</a></li>
-          <li><a href="#topics">Topics</a></li>
-          <li><a href="#submission">Submission</a></li>
-          <li><a href="#committee">Committee</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="controls" role="region" aria-label="Controls">
-        <a class="btn" href="https://cmt3.research.microsoft.com/ICNSIET2025" target="_blank" rel="noopener">Submit via CMT</a>
-        <button class="btn secondary" onclick="scrollToSection('submission')">How to Submit</button>
-
-        <div id="themeToggle" class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0">
-          <div class="dot"></div>
-        </div>
-      </div>
-    </div>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="https://raw.githubusercontent.com/icnsiet/icnsiet2025/a2b10aaebaa0bb05033d2f91be1d9160ac75c420/public/ICNSIET_logo.png" alt="ICNSIET Logo" />
+        <span class="logo-text">ICNSIET 2026</span>
+      </a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#dates">Dates</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <main>
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-card" id="hero">
-        <span class="badge">February 20–21, 2026 • Hyderabad, India</span>
-        <h1 id="hero-heading">International Conference on Networking, Security &amp; Internet of Things (ICNSIET 2025)</h1>
-        <p class="lead">A premier international forum for researchers and practitioners working at the intersection of networking, security and the Internet of Things. Papers and reviews are managed using Microsoft CMT.</p>
+  <section id="home">
+    <div class="date-badge">February 20–21, 2026</div>
+    <h1>International Conference on <span class="highlight">Smart Innovations</span> in Engineering & Technology</h1>
+    <p class="tagline">Innovating for a Smarter, Sustainable Future</p>
 
-        <div class="hero-cta">
-          <a class="btn" href="https://cmt3.research.microsoft.com/ICNSIET2025" target="_blank" rel="noopener">Submit Paper (CMT)</a>
-          <a class="btn secondary" href="#about">Learn More</a>
-        </div>
-
-        <div class="countdown-wrap" aria-hidden="false" aria-label="Countdown to conference">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div style="font-weight:800;color:var(--accent)">Conference starts in</div>
-            <div class="small">Local time zone</div>
-          </div>
-
-          <div class="countdown-grid" style="margin-top:12px">
-            <div class="count-item">
-              <div class="count-value" id="days">0</div>
-              <div class="count-label">Days</div>
-            </div>
-            <div class="count-item">
-              <div class="count-value" id="hours">0</div>
-              <div class="count-label">Hours</div>
-            </div>
-            <div class="count-item">
-              <div class="count-value" id="minutes">0</div>
-              <div class="count-label">Minutes</div>
-            </div>
-            <div class="count-item">
-              <div class="count-value" id="seconds">0</div>
-              <div class="count-label">Seconds</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <aside class="panel" aria-labelledby="panel-heading">
-        <h3 id="panel-heading">Quick Info</h3>
-        <div class="meta">Venue: <strong class="venue">Sreenidhi Institute of Science and Technology, Hyderabad</strong></div>
-        <div class="meta">Registration deadline: <strong>February 3, 2026</strong></div>
-        <div class="meta">All papers handled on <a href="https://cmt3.research.microsoft.com/ICNSIET2025" target="_blank" rel="noopener">Microsoft CMT</a></div>
-        <div style="margin-top:10px">
-          <a class="btn" href="#dates" onclick="scrollToSection('dates')">Important Dates</a>
-        </div>
-      </aside>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="block" aria-labelledby="about-heading">
-      <div class="card">
-        <h2 id="about-heading" style="margin:0 0 10px 0;color:var(--accent-2)">About ICNSIET 2025</h2>
-        <p class="small">ICNSIET 2025 brings together academics, researchers, industry experts and students to present and discuss recent advances in networking, cybersecurity, embedded systems and Internet of Things applications. The conference welcomes original research articles, case studies and surveys that contribute to theory, applications and practice.</p>
-        <div style="margin-top:16px" class="grid">
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <div class="card" style="padding:12px;min-width:200px">
-              <h4>Who should submit?</h4>
-              <p class="small">Researchers, graduate students, industry practitioners and engineers working in related fields.</p>
-            </div>
-            <div class="card" style="padding:12px;min-width:200px">
-              <h4>Publication</h4>
-              <p class="small">Accepted papers will be considered for proceedings and indexed in relevant publication channels (details available on acceptance).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DATES -->
-    <section id="dates" class="block" aria-labelledby="dates-heading">
-      <h2 id="dates-heading" style="color:var(--accent-2);margin-bottom:10px">Important Dates</h2>
-      <div class="dates-list card" style="padding:14px">
-        <div class="date-item">
-          <div class="date-label">Call for Papers Opens</div>
-          <div class="date-value">August 25, 2025</div>
-        </div>
-        <div class="date-item">
-          <div class="date-label">Abstract Submission Deadline</div>
-          <div class="date-value">October 31, 2025</div>
-        </div>
-        <div class="date-item">
-          <div class="date-label">Notification of Acceptance (Abstract)</div>
-          <div class="date-value">December 1, 2025</div>
-        </div>
-        <div class="date-item">
-          <div class="date-label">Final Paper Submission (Camera-ready)</div>
-          <div class="date-value">January 30, 2026</div>
-        </div>
-        <div class="date-item">
-          <div class="date-label">Registration Deadline</div>
-          <div class="date-value">February 3, 2026</div>
-        </div>
-        <div class="date-item" style="background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(37,99,235,0.02));border:1px solid rgba(37,99,235,0.08);">
-          <div class="date-label">Conference Dates</div>
-          <div class="date-value">February 20–21, 2026</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOPICS -->
-    <section id="topics" class="block" aria-labelledby="topics-heading">
-      <h2 id="topics-heading" style="color:var(--accent-2);margin-bottom:10px">Topics of Interest</h2>
-      <div class="cards">
-        <div class="card">
-          <h4>Networking & Communication</h4>
-          <p class="small">5G/6G networks, SDN, network function virtualization, network automation and performance evaluation.</p>
-        </div>
-        <div class="card">
-          <h4>Security & Privacy</h4>
-          <p class="small">Network security, intrusion detection, secure protocols, privacy-preserving systems, applied cryptography.</p>
-        </div>
-        <div class="card">
-          <h4>Internet of Things (IoT)</h4>
-          <p class="small">IoT architectures, edge computing, sensor networks, low-power devices, industrial IoT applications.</p>
-        </div>
-        <div class="card">
-          <h4>Embedded & Cyber-Physical Systems</h4>
-          <p class="small">Real-time systems, reliable design, safety, hardware-software co-design, secure firmware.</p>
-        </div>
-        <div class="card">
-          <h4>AI & Edge Intelligence</h4>
-          <p class="small">ML for networking/IoT, federated learning, edge inference, anomaly detection and intelligent protocols.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SUBMISSION (CMT) -->
-    <section id="submission" class="block" aria-labelledby="submission-heading">
-      <h2 id="submission-heading" style="color:var(--accent-2);margin-bottom:10px">Paper Submission (Microsoft CMT)</h2>
-
-      <div class="card grid" style="grid-template-columns:1fr 320px;align-items:start">
-        <div>
-          <h4 style="margin-top:0">All submissions & peer-review management</h4>
-          <p class="small">ICNSIET 2025 uses Microsoft CMT for all paper submission, review and decision processes. Authors must create or use an existing CMT account to submit. Use the official conference page on CMT to submit abstracts and full papers.</p>
-
-          <ol style="margin-top:12px;color:var(--muted)">
-            <li><strong>Prepare manuscript:</strong> Follow the conference template and page limits (check CMT page for template and instructions).</li>
-            <li><strong>Create CMT account:</strong> If you don't have one, register on Microsoft CMT.</li>
-            <li><strong>Submit on CMT:</strong> Upload your abstract/full paper on the official CMT conference page.</li>
-            <li><strong>Double-blind review:</strong> Papers undergo double-blind peer review as described on the CMT portal.</li>
-          </ol>
-
-          <p style="margin-top:10px" class="small">CMT documentation (website requirements & external website guidance) has been consulted. The conference web page clearly lists title, dates, venue, contact information and the official CMT link as required.</p>
-
-          <p style="margin-top:12px">
-            <a class="btn" href="https://cmt3.research.microsoft.com/ICNSIET2025" target="_blank" rel="noopener">Go to ICNSIET 2025 on CMT</a>
-          </p>
-        </div>
-
-        <aside class="panel" style="padding:16px">
-          <h3 style="margin:0 0 8px 0">CMT Quick Links</h3>
-          <div style="font-size:0.95rem;color:var(--muted)">
-            <div style="margin-bottom:8px"><strong>Submission Portal:</strong><br><a href="https://cmt3.research.microsoft.com/ICNSIET2025" target="_blank" rel="noopener">cmt3.research.microsoft.com/ICNSIET2025</a></div>
-            <div style="margin-bottom:8px"><strong>Contact for submissions:</strong><br><a href="mailto:info@icnsiet.org">info@icnsiet.org</a></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- COMMITTEE -->
-    <section id="committee" class="block" aria-labelledby="committee-heading">
-      <h2 id="committee-heading" style="color:var(--accent-2);margin-bottom:10px">Organizing Committee</h2>
-
-      <div class="people">
-        <div class="person">
-          <h4>Dr. K. G. B. Santhosh Kumari</h4>
-          <div class="small">General Chair — Sreenidhi Institute of Science and Technology</div>
-        </div>
-        <div class="person">
-          <h4>Prof. (Placeholder) Program Chair</h4>
-          <div class="small">Program Chair — (Affiliation)</div>
-        </div>
-        <div class="person">
-          <h4>Organising Committee Members</h4>
-          <div class="small">List of committee members and TPC will be updated on the CMT portal and conference website.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="block" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" style="color:var(--accent-2);margin-bottom:10px">Contact & Venue</h2>
-
-      <div class="contact-grid">
-        <div class="card">
-          <h4>Conference Secretariat</h4>
-          <p class="small"><strong>Address:</strong><br>Sreenidhi Institute of Science and Technology<br>Yamnampet (V), Ghatkesar (M), Hyderabad — Telangana, India</p>
-
-          <p class="small"><strong>Email:</strong> <a href="mailto:info@icnsiet.org">info@icnsiet.org</a></p>
-          <p class="small"><strong>Website:</strong> <a href="https://icnsiet.org" target="_blank" rel="noopener">https://icnsiet.org</a></p>
-
-          <div style="margin-top:12px">
-            <h4>Registration Fees (indicative)</h4>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-              <div style="padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent)">Author: <strong>₹35,000</strong></div>
-              <div style="padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent)">Student: <strong>₹8,000</strong></div>
-            </div>
-            <div class="small" style="margin-top:6px;color:var(--muted)">Actual fees & payment instructions will be on the registration page.</div>
-          </div>
-        </div>
-
-        <div class="card" style="padding:16px">
-          <h4>Venue & Travel</h4>
-          <p class="small">Sreenidhi Institute of Science and Technology (SNIST), close to Hyderabad city — local transport and hotel options will be posted on the site.</p>
-
-          <h4 style="margin-top:14px">Local organizer</h4>
-          <p class="small">Department of Computer Science & Engineering, SNIST</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER CTA -->
-    <div class="footer" role="contentinfo" aria-label="Footer information">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div>
-          <strong style="font-size:1.05rem">ICNSIET 2025</strong>
-          <div class="ack">All paper submissions and reviews are managed through Microsoft CMT. For CMT assistance, visit Microsoft CMT help pages.</div>
-        </div>
-        <div style="text-align:right">
-          <div style="font-weight:700">February 20–21, 2026</div>
-          <div class="small">Sreenidhi Institute of Science and Technology — Hyderabad</div>
-        </div>
-      </div>
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-primary">Submit via CMT</a>
+      <a href="#about" class="btn btn-secondary">Learn More</a>
     </div>
 
-    <footer>
-      <div>© 2026 ICNSIET. All rights reserved. • For submission & review: Microsoft CMT</div>
-    </footer>
-  </main>
+    <div class="countdown">
+      <h3>Conference Countdown</h3>
+      <div class="countdown-grid">
+        <div class="countdown-item"><span class="countdown-value" id="days">0</span><span class="countdown-label">Days</span></div>
+        <div class="countdown-item"><span class="countdown-value" id="hours">0</span><span class="countdown-label">Hours</span></div>
+        <div class="countdown-item"><span class="countdown-value" id="minutes">0</span><span class="countdown-label">Minutes</span></div>
+        <div class="countdown-item"><span class="countdown-value" id="seconds">0</span><span class="countdown-label">Seconds</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About the Conference</h2>
+    <div class="about-content">
+      <p>The International Conference on Smart Innovations in Engineering and Technology (ICNSIET 2026) provides a global platform for researchers, academicians, and industry professionals to exchange innovative ideas and explore advancements in engineering, computing, and intelligent systems.</p>
+      <p>The conference encourages interdisciplinary collaboration to address emerging challenges through sustainable and technology-driven solutions. All submissions and peer-review management are handled via Microsoft CMT.</p>
+    </div>
+  </section>
+
+  <section id="dates">
+    <h2>Important Dates</h2>
+    <div class="dates-list">
+      <div class="date-item"><span class="date-label">Call for Papers Opens</span><span class="date-value">August 25, 2025</span></div>
+      <div class="date-item"><span class="date-label">Abstract Submission Deadline</span><span class="date-value">October 31, 2025</span></div>
+      <div class="date-item"><span class="date-label">Notification for Acceptance of Abstract</span><span class="date-value">December 1, 2025</span></div>
+      <div class="date-item"><span class="date-label">Final Paper Submission</span><span class="date-value">January 30, 2026</span></div>
+      <div class="date-item"><span class="date-label">Registration Deadline</span><span class="date-value">February 3, 2026</span></div>
+      <div class="date-item highlight"><span class="date-label">Conference Dates</span><span class="date-value">February 20–21, 2026</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>ICNSIET 2026</h3>
+          <p>International Conference on Smart Innovations in Engineering & Technology</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#dates">Important Dates</a></li>
+            <li><a href="#">Submit via CMT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="cmt-acknowledgment">The Microsoft CMT service is used for managing the peer-reviewing process of this conference.</p>
+        <p class="copyright">© 2026 ICNSIET. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    // ---------- Theme Toggle ----------
-    (function(){
-      const root = document.documentElement;
-      const themeToggle = document.getElementById('themeToggle');
-      const saved = localStorage.getItem('icnsiet_theme');
-      function applyTheme(t){
-        if(t === 'dark'){ root.setAttribute('data-theme','dark'); themeToggle.setAttribute('aria-checked','true'); }
-        else { root.removeAttribute('data-theme'); themeToggle.setAttribute('aria-checked','false'); }
+    const conferenceDate = new Date("2026-02-20T09:00:00").getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = conferenceDate - now;
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
       }
-      applyTheme(saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-      function toggle(){
-        const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-        const next = current === 'dark' ? 'light' : 'dark';
-        applyTheme(next);
-        localStorage.setItem('icnsiet_theme', next);
-      }
-      themeToggle.addEventListener('click', toggle);
-      themeToggle.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
-    })();
-
-    // ---------- Smooth scroll for nav links & scroll helper ----------
-    function scrollToSection(id){
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.scrollIntoView({behavior:'smooth',block:'start'});
     }
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const href = this.getAttribute('href');
-        if(href && href.startsWith('#')){
-          e.preventDefault();
-          const id = href.substring(1);
-          scrollToSection(id);
-        }
-      });
-    });
-
-    // ---------- Countdown ----------
-    (function(){
-      // Conference start time (local): 2026-02-20 09:00 local time (change time if you prefer)
-      const target = new Date('2026-02-20T09:00:00');
-      const daysEl = document.getElementById('days');
-      const hoursEl = document.getElementById('hours');
-      const minsEl = document.getElementById('minutes');
-      const secsEl = document.getElementById('seconds');
-
-      function update(){
-        const now = new Date();
-        const diff = target - now;
-        if(diff <= 0){
-          daysEl.textContent = '0';
-          hoursEl.textContent = '0';
-          minsEl.textContent = '0';
-          secsEl.textContent = '0';
-          return;
-        }
-        const s = Math.floor(diff/1000);
-        const days = Math.floor(s/(3600*24));
-        const hours = Math.floor((s % (3600*24)) / 3600);
-        const mins = Math.floor((s % 3600) / 60);
-        const secs = s % 60;
-        daysEl.textContent = days;
-        hoursEl.textContent = hours.toString().padStart(2,'0');
-        minsEl.textContent = mins.toString().padStart(2,'0');
-        secsEl.textContent = secs.toString().padStart(2,'0');
-      }
-      update();
-      setInterval(update,1000);
-    })();
-
-    // ---------- Accessibility: reduce motion if user prefers ----------
-    (function(){
-      const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-      if(media && media.matches){
-        document.documentElement.style.scrollBehavior = 'auto';
-      }
-    })();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
